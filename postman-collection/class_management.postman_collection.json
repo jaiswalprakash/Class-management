@@ -1,0 +1,674 @@
+{
+	"info": {
+		"_postman_id": "7baa0dd2-fc1f-459b-9e24-056d5d049151",
+		"name": "class_management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"sunil\",\r\n    \"password\": \"asdf1234\",\r\n    \"email\": \"sunil@gmail.com\",\r\n    \"role\": \"STUDENT\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\":\"asdf1234\",\r\n    \"email\":\"sandeep@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Class",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGNkNjk3ZjAyMTIxYjM4ZmNlMTQwNjUiLCJlbWFpbCI6InNhbmRlZXBAZ21haWwuY29tIiwibmFtZSI6InNhbmRlZXAiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2MjQwNzQ5NDQsImV4cCI6MTYyNDA4OTM0NH0.fbxuCXv8zQyslAwH2GLD-j25jWPszDhKMaRWwjjoG6c",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"html\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/class/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"class",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Class",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGNjM2U5Y2E2ZTkxOTI0ZTQwNGU1NjMiLCJlbWFpbCI6InNhbmRlZXBAZ21haWwuY29tIiwibmFtZSI6InNhbmRlZXAgamFpc3dhbCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYyNDAwMjM5MSwiZXhwIjoxNjI0MDA1OTkxfQ.rF7HXNe68CAKzkdrqyXTQbwlgbVDGiUdQ_SOXuLMt1E",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"javascript\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/class/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"class",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update Class",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGNjM2U5Y2E2ZTkxOTI0ZTQwNGU1NjMiLCJlbWFpbCI6InNhbmRlZXBAZ21haWwuY29tIiwibmFtZSI6InNhbmRlZXAgamFpc3dhbCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYyNDAwMjM5MSwiZXhwIjoxNjI0MDA1OTkxfQ.rF7HXNe68CAKzkdrqyXTQbwlgbVDGiUdQ_SOXuLMt1E",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"javascript\",\r\n    \"id\":\"CLS-426\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/class/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"class",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete Class",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGNjM2U5Y2E2ZTkxOTI0ZTQwNGU1NjMiLCJlbWFpbCI6InNhbmRlZXBAZ21haWwuY29tIiwibmFtZSI6InNhbmRlZXAgamFpc3dhbCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYyNDAwMjM5MSwiZXhwIjoxNjI0MDA1OTkxfQ.rF7HXNe68CAKzkdrqyXTQbwlgbVDGiUdQ_SOXuLMt1E",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/class/delete/CLS-879",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"class",
+						"delete",
+						"CLS-879"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Batch",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGNkNjk3ZjAyMTIxYjM4ZmNlMTQwNjUiLCJlbWFpbCI6InNhbmRlZXBAZ21haWwuY29tIiwibmFtZSI6InNhbmRlZXAiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2MjQwNzQ5NDQsImV4cCI6MTYyNDA4OTM0NH0.fbxuCXv8zQyslAwH2GLD-j25jWPszDhKMaRWwjjoG6c",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"EVENING\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/batch/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"batch",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Batch",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGNjM2U5Y2E2ZTkxOTI0ZTQwNGU1NjMiLCJlbWFpbCI6InNhbmRlZXBAZ21haWwuY29tIiwibmFtZSI6InNhbmRlZXAgamFpc3dhbCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYyNDAwMjM5MSwiZXhwIjoxNjI0MDA1OTkxfQ.rF7HXNe68CAKzkdrqyXTQbwlgbVDGiUdQ_SOXuLMt1E",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/batch/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"batch",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update Batch",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGNjM2U5Y2E2ZTkxOTI0ZTQwNGU1NjMiLCJlbWFpbCI6InNhbmRlZXBAZ21haWwuY29tIiwibmFtZSI6InNhbmRlZXAgamFpc3dhbCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYyNDAwMjM5MSwiZXhwIjoxNjI0MDA1OTkxfQ.rF7HXNe68CAKzkdrqyXTQbwlgbVDGiUdQ_SOXuLMt1E",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n    \"id\":\"BTH-249\",\r\n    \"name\":\"EVENING\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/batch/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"batch",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete Batch",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGNjM2U5Y2E2ZTkxOTI0ZTQwNGU1NjMiLCJlbWFpbCI6InNhbmRlZXBAZ21haWwuY29tIiwibmFtZSI6InNhbmRlZXAgamFpc3dhbCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYyNDAwMjM5MSwiZXhwIjoxNjI0MDA1OTkxfQ.rF7HXNe68CAKzkdrqyXTQbwlgbVDGiUdQ_SOXuLMt1E",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/batch/delete/BTH-277",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"batch",
+						"delete",
+						"BTH-277"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Teacher-Class",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGNkNjk3ZjAyMTIxYjM4ZmNlMTQwNjUiLCJlbWFpbCI6InNhbmRlZXBAZ21haWwuY29tIiwibmFtZSI6InNhbmRlZXAiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2MjQwNzQ5NDQsImV4cCI6MTYyNDA4OTM0NH0.fbxuCXv8zQyslAwH2GLD-j25jWPszDhKMaRWwjjoG6c",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"class\": \"60cd6ae7a572f036c4cc2552\",\r\n    \"instructor\": \"60cd694402121b38fce14062\",\r\n    \"startDate\": \"2020-10-01\",\r\n    \"endDate\": \"2020-11-02\",\r\n    \"batch\": \"60cd6b23a572f036c4cc2556\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/teacher-class",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"teacher-class"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Techer-Class",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGNjM2U5Y2E2ZTkxOTI0ZTQwNGU1NjMiLCJlbWFpbCI6InNhbmRlZXBAZ21haWwuY29tIiwibmFtZSI6InNhbmRlZXAgamFpc3dhbCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYyNDAwODc2OCwiZXhwIjoxNjI0MDEyMzY4fQ.GM5B0ZFo-uWNXJbdcTqyCT-sbwuVm_IFy77xkw1XzTI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/teacher-class/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"teacher-class",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getInstructor",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGNjM2U5Y2E2ZTkxOTI0ZTQwNGU1NjMiLCJlbWFpbCI6InNhbmRlZXBAZ21haWwuY29tIiwibmFtZSI6InNhbmRlZXAgamFpc3dhbCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYyNDAxMDY1NiwiZXhwIjoxNjI0MDE0MjU2fQ.fOvP1VJqpYJ1A6SqPhUAxPHn0y-2IvgZ5JlMccD1PNw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/users/getStudent",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users",
+						"getStudent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "student-class",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGNiNzg5ZWQ3ZTAwOTFhZWM0OGRiOWEiLCJlbWFpbCI6InByYWthc2g2MjVAZ21haWwuY29tIiwibmFtZSI6InNhbmRlZXAgamFpc3dhbCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYyNDAzNDUyMSwiZXhwIjoxNjI0MDM4MTIxfQ.OocUH0f7eNNtHAbkGb4oyartIHrTUeaG5vrch9eMvWM"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"class\": \"60cb8bcf9ddb482420d48498\",\n    \"instructor\": \"60cb7ad719bb5505783a6b66\",\n    \"batch\": \"60cb8cdcbbfbf3183cd5e9b0\",\n    \"student\":\"60cb784c5b8ad74088c7830c\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/student-class",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"student-class"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getStudent",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGNjM2U5Y2E2ZTkxOTI0ZTQwNGU1NjMiLCJlbWFpbCI6InNhbmRlZXBAZ21haWwuY29tIiwibmFtZSI6InNhbmRlZXAgamFpc3dhbCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYyNDAxMDY1NiwiZXhwIjoxNjI0MDE0MjU2fQ.fOvP1VJqpYJ1A6SqPhUAxPHn0y-2IvgZ5JlMccD1PNw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/users/getStudent",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users",
+						"getStudent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getInstructorByclass",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGNiNzg5ZWQ3ZTAwOTFhZWM0OGRiOWEiLCJlbWFpbCI6InByYWthc2g2MjVAZ21haWwuY29tIiwibmFtZSI6InNhbmRlZXAgamFpc3dhbCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYyNDAzMjQ2NCwiZXhwIjoxNjI0MDM2MDY0fQ.R7E_XxtJ_kE_G57DKSD1EkkXQ8K69oemIKZ9kLDIvu4"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:4000/teacher-class/getInstructorByclass/60cb8bcf9ddb482420d48498",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"teacher-class",
+						"getInstructorByclass",
+						"60cb8bcf9ddb482420d48498"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getBatchByclassInstructor",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGNiNzg5ZWQ3ZTAwOTFhZWM0OGRiOWEiLCJlbWFpbCI6InByYWthc2g2MjVAZ21haWwuY29tIiwibmFtZSI6InNhbmRlZXAgamFpc3dhbCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYyNDAzMjQ2NCwiZXhwIjoxNjI0MDM2MDY0fQ.R7E_XxtJ_kE_G57DKSD1EkkXQ8K69oemIKZ9kLDIvu4"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"class\": \"60cb8bcf9ddb482420d48498\",\n    \"instructor\": \"60ccbf3e00b9132c650d8cca\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/teacher-class/getBatchByclassInstructor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"teacher-class",
+						"getBatchByclassInstructor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "student-class/getByStudentId",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGNiNzg5ZWQ3ZTAwOTFhZWM0OGRiOWEiLCJlbWFpbCI6InByYWthc2g2MjVAZ21haWwuY29tIiwibmFtZSI6InNhbmRlZXAgamFpc3dhbCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYyNDAzNDUyMSwiZXhwIjoxNjI0MDM4MTIxfQ.OocUH0f7eNNtHAbkGb4oyartIHrTUeaG5vrch9eMvWM"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"class\": \"60cb8bcf9ddb482420d48498\",\n    \"instructor\": \"60cb7ad719bb5505783a6b66\",\n    \"batch\": \"60cb8cdcbbfbf3183cd5e9b0\",\n    \"student\":\"60cb784c5b8ad74088c7830c\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/student-class/getByStudentId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"student-class",
+						"getByStudentId"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tescher-class-getByInstructorId",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGNjM2U5Y2E2ZTkxOTI0ZTQwNGU1NjMiLCJlbWFpbCI6InNhbmRlZXBAZ21haWwuY29tIiwibmFtZSI6InNhbmRlZXAgamFpc3dhbCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYyNDAwODc2OCwiZXhwIjoxNjI0MDEyMzY4fQ.GM5B0ZFo-uWNXJbdcTqyCT-sbwuVm_IFy77xkw1XzTI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/teacher-class/getByInstructorId/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"teacher-class",
+						"getByInstructorId",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
